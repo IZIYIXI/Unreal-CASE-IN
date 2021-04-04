@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Знакомство с возможностями карьерного роста</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="container">
+				<a class="logo" href="https://www.rosatom.ru" target="_blank">
+					<span><b>Р</b></span>
+					<span><b>О</b></span>
+					<span><b>С</b></span>
+					<span>А</span>
+					<span>Т</span>
+					<span>О</span>
+					<span>М</span>
+				</a>
+				<div class="nav-toggle"><span></span></div>
+				<ul id="menu">
+					<li><a href="career.html">Карьерный рост</a></li>
+					<li><a href="game.html">Мини-игра</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="sections-list">
+				<article id="section-1" class="section">
+					<h2 class="section-title">Мини-игра о карьерном росте</h2>
+					<div class="section-content" id=game-desc>
+						<p>Это Петя.</p>
+						<p>Петя только что устроился на работу в госкорпорацию «Росатом».</p>
+						<p>Петя хочет подняться по карьерной лестнице.</p>
+						<p>Петя перспективный.</p>
+						<p>Будь как Петя.</p>
+						<p><br>Помоги Пете добиться успеха, выбирая действия, которые ему <b>следует</b> выполнять.<br>
+						Но будь внимателен! Некоторые действия, которые придут Пете на ум, могут привести к <b>негативным</b> последствиям.</p>
+					</div>
+				</article>
+				<article id="section-2" class="section">
+					<div class="section-content">
+							
+						<div class="game-zone">
+							<div class="game-col">
+							 	<button class="game-button" id="button-1">Кнопка 1</button>
+								<button class="game-button" id="button-2">Кнопка 222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</button>
+							</div>
+							<div class="game-col">
+								<img id="game-person" src="img/lower_idle.png">
+								<div>
+									<p id="game-display">test display</p>
+								</div>
+							</div>
+							<div class="game-col">
+								<button class="game-button" id="button-3">Кнопка 3333333333333333333333333333333333333333333333333333333</button>
+								<button class="game-button" id="button-4">Кнопка 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</button>
+							</div>
+						</div>
+
+						<script src="js/game.js"></script>
+
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="footer-col">
+					<span>Unreal © 2021<br>(для CASE-IN и Росатом)</span>
+				</div>
+				<div class="footer-col"></div>
+				<div class="footer-col"></div>
+			</div>
+		</footer>
+
+		<script>
+			$('.nav-toggle').on('click', function()
+			{
+				$('#menu').toggleClass('active');
+			});
+		</script>
+	</body>
+</html>

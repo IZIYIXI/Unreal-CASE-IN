@@ -1,0 +1,387 @@
+/* добавим плавность переходов для всех элементов страницы*/
+*, *:after, *:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: .5s ease-in-out;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: cursive;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+h1 a {
+	color: #2C39DE;
+}
+
+h2 a {
+	color: #333333;
+}
+
+.header-link:hover {
+	color: #2C39DE;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, .25);
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1;
+	color: #333333;
+	background: #F2F2F2;
+}
+
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	padding: 0 15px;
+}
+
+header {
+	width: 100%;
+	background: white;
+	box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
+	padding: 15px 0;
+	margin-bottom: 25px;
+	position: relative;
+	font-family: cursive;
+}
+
+.logo {
+	display: block;
+	float: left;
+}
+
+.logo span {
+	color: white;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	margin: 5px 0;
+	text-align: center;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+}
+
+.logo span:nth-child(odd) {
+	background: #3264C8;
+}
+
+.logo span:nth-child(even) {
+	background: #2C96DE;
+}
+
+#menu {
+	float: right;
+}
+
+#menu li {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#menu a {
+	color: #333333;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	display: block;
+	line-height: 40px;
+}
+
+#menu a:hover {
+	color: #2ABCD4;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, .167);
+}
+
+#menu li:last-child {
+	margin-right: 0;
+}
+
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+	display: none;
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	background: #4C2AD4;
+	cursor: pointer;
+}
+
+.nav-toggle span {
+	display: block;
+	position: absolute;
+	top: 19px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: white;
+}
+
+.nav-toggle span:before, .nav-toggle span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+
+.nav-toggle span:before {
+	top: -10px;
+}
+
+.nav-toggle span:after {
+	bottom: -10px;
+}
+
+/* класс, который будет добавлен к верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu.active {
+	max-height: 123px;
+}
+
+.sections-list {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.section {
+	margin-bottom: 15px;
+	padding-bottom: 1em;
+}
+
+.section-content p {
+	line-height: 1.5;
+}
+
+.section-image {
+	margin-bottom: 12px;
+}
+
+.category {
+	margin-top: 15px;
+}
+
+.category a {
+	color: #2C39DE;
+	text-transform: uppercase;
+}
+
+.category a:hover {
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, .333);
+}
+
+.section-title {
+	margin-bottom: 12px;
+	font-size: 1.6em;
+}
+
+#game-desc {
+	font-family: cursive;
+}
+
+.game-zone {
+	font-family: cursive;
+}
+
+.game-col {
+	width: 33.3333333333%;
+	text-align: center;
+	float: left;
+}
+
+#game-person {
+	max-width: 100%;
+	height: auto;
+}
+
+#button-1 {
+
+}
+
+#button-2 {
+	visibility: hidden;
+}
+
+#button-3 {
+}
+
+#button-4 {
+	visibility: hidden;
+}
+
+.game-button {
+	background-color: #3264C8;
+	border: 3px solid;
+	border-radius: 50%;
+	font-size: 1.25em;
+	font-family: cursive;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	width: 100%;
+	height: auto;
+	display: block;
+	position: relative;
+	transition: 0.5s;
+	overflow: hidden;
+	float: none;
+	margin: 1em 0;
+	padding: 1em;
+}
+
+.game-button:hover {
+	color: #3264C8;
+	background-color: transparent;
+	border-color: #3264C8;
+}
+
+#game-display {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.25em;
+	color: #333333;
+	/*text-decoration: none;*/
+	position: relative;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+footer {
+	padding: 30px 0;
+	background: #4C2AD4;
+	color: white;
+}
+
+.footer-col {
+	width: 33.3333333333%;
+	float: left;
+}
+
+.footer-col a {
+	color: white;
+}
+
+.footer-col:last-child {
+	text-align: right;
+}
+
+@media (max-width: 768px) {
+	/* показываем кнопку для переключения верхней навигации */
+	.nav-toggle {
+		display: block;
+	}
+
+	header {
+		padding: 10px 0;
+	}
+
+	/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
+	#menu {
+		max-height: 0;
+		background: white;
+		float: none;
+		position: absolute;
+		overflow: hidden;
+		top: 63px;
+		right: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		z-index: 3;
+	}
+
+	/* делаем элементы списка блочными, чтобы они располагались друг под другом */
+	#menu li {
+		display: block;
+		text-align: center;
+		border-bottom: 1px solid #E5E5E5;
+		margin-right: 0;
+	}
+
+	/* отменяем обтекание разделов, устанавливаем ширину 100%*/
+	.sections-list {
+		width: 100%;
+		float: none;
+	}
+}
+
+@media (max-width: 480px) {
+	/* отменяем обтекание для логотипа и выравниваем по центру*/
+	.logo {
+		float: none;
+		margin: 0 auto 15px;
+		display: table;
+	}
+
+	.logo span {
+		margin: 0 2px;
+	}
+
+	/* позиционируем меню на увеличившуюся высоту шапки */
+	#menu {
+		top: 118px;
+	}
+
+	.game-col {
+		float: none;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.game-col:last-child {
+		margin-bottom: 0;
+	}
+
+	/* отменяем обтекание для столбцов подвала страницы */
+	.footer-col {
+		float: none;
+		margin-bottom: 20px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-col:last-child {
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
